@@ -1,0 +1,67 @@
+.translate-content {
+    width: 420px;
+    padding: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.input-content {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+}
+
+.input-content textarea {
+    width: 40%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .4);
+    outline: none;
+    transition: .1s;
+    /*cursor: pointer;*/
+    font-size: 14px;
+    text-indent: 10px;
+    color: rgba(0, 0, 0, .8);
+    /*resize: none;*/
+}
+.input-content textarea::placeholder{
+    font-size: 14px;
+    color: rgba(0,0,0,.4);
+}
+
+.input-content textarea:hover {
+    border: 1px solid #409EFF;
+}
+
+.translate-btn {
+    width: 60px;
+    height: 60px;
+    background: #409EFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.translate-btn:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.translate-box{
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+}
+
+.translate-box select{
+    width: 60px;
+}

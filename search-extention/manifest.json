@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Translate",
+  "version": "0.1.1",
+  "description": "谷歌浏览器扩展，点击图标可以出现便捷翻译，翻译接口采用谷歌翻译，有道翻译",
+  "icons": {
+    "16": "./image/icon.png",
+    "48": "./image/icon.png",
+    "128": "./image/icon.png"
+  },
+  "browser_action": {
+    "default_title": "Translate",       //配置默认名称
+    "default_popup": "popup.html",      //配置入口html
+    "default_icon": "./image/icon.png", //配置插件默认头像
+    "name": "翻译"
+  },
+
+  //这里是重点，做好笔记 只有设置了 script-src 'self' 'unsafe-eval object-src 'self' 才能通过浏览器安全限制访问js， 如果要通过ajax请求则要将请求url在这里声明
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://openapi.youdao.com/api; object-src 'self'",
+
+  "permissions" : [
+    "*://*/*"
+  ]
+}
